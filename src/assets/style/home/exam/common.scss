@@ -1,0 +1,248 @@
+/* 字体红色 */
+.color-red{
+	color:#ED1414 !important;
+}
+/* 字体绿色 */
+.color-green{
+	color:#03B603!important;
+}
+/* 背景红色 */
+.back-red{
+	background:#ED1414 !important;
+}
+/* 背景绿色 */
+.back-green{
+	background:#03B603 !important;
+}
+/* 答题页面，答案解析页面解析，练习页面答题列表公共样式 */
+.main{
+	margin-bottom:1.2rem;
+	box-sizing: border-box;
+	>.list{
+		height:auto;
+		min-height: 6.19rem;
+		background:#ffffff;
+		padding: .44rem .05rem 1.2rem .35rem;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		img{
+			width: 100%;
+			height:100%;
+			max-width:80vw;
+			max-height:3rem;
+			margin-bottom: .2rem;
+		}
+		h4{
+			align-self: flex-start;
+			margin-bottom: .8rem;
+			font-size: .3rem;
+			font-weight:bold;
+			line-height: .4rem;
+			color:#000000;
+		}
+		.item{
+			margin:0 0 .63rem .35rem;
+			// text-align: center;
+			line-height: .5rem;
+			font-size: .26rem;
+			color:#333333;
+			display: flex;
+			align-items: center;
+			.quest-num-order{
+				width: .58rem;
+				height:.58rem;
+				min-width: .58rem;
+				min-height: .58rem;
+				line-height: .58rem;
+				border:1px solid #E0E0E0;//.01rem在实机上面太小显示不出来,故用px
+				box-sizing: border-box;
+				margin-right: .37rem;
+				background:#F5F5F5;
+				font-size:.28rem;
+				@include borderRadius(50%);
+			}
+			.no-select{
+				background:#FF0000;
+				color: #FFFFFF;
+				border:none;
+			}
+			.select{
+				background:#03B603;
+				color: #FFFFFF;
+				border:none;
+			}
+			
+		}
+		.last-itme{
+			margin-top: .68rem;
+		}
+		.active{
+			background: #3587FC;
+			color:#FFFFFF;
+		}
+	}
+} 
+/* 答题页面，答案解析页面解析，练习尾部页面公共样式 */
+.footer{
+	width: 100%;
+	height:auto;
+	>.mask{
+		width: 100vw;
+		height: 250vh;
+		// min-height: 200vh;
+		overflow: none;
+		position: absolute;
+		top:0;
+		left:0;
+		opacity:.4;
+		z-index: 800;
+		background-color: #000;
+	}
+	>.option{
+		position: fixed;
+		width: 100%;
+		left:0;
+		bottom:0;
+		z-index: 1000;
+		background:#ffffff;
+		>.top{
+			height:1.2rem;
+			padding:.27rem 0 .33rem 0;
+			border-top:.01rem solid #E5E5E5;
+			border-bottom:.01rem solid #E5E5E5;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			p{
+				display: flex;
+				align-items: center;
+				font-size: .24rem;
+				img{
+					width: .3rem;
+					height: .3rem;
+					margin-right: .13rem;
+				}
+			}
+
+			.num-order{
+				color:#888888;
+				img{
+					background:#c7bdbd;
+				}
+			}
+			.btn{
+				width: 1.4rem;
+				height: .6rem;
+				border-radius: .04rem;
+				background: #3587FC;
+				font-size: .24rem;
+				font-weight:500;
+				color:#ffffff;
+			}
+			.no-select{
+			border:1px solid #A8CCFE;//.01rem在实机上面太小显示不出来,故用px
+			background: #ffffff;
+			color:#3689FE;
+		}
+		.commit{
+			img{
+				width: .34rem;
+				height:.34rem;
+			}
+			background:#FFAE00;
+		}
+	}
+	// 题目序号列表
+	.list{
+		height: auto;
+		max-height: 8.52rem;
+		padding:.34rem .43rem 0;
+		display: flex;
+		flex-wrap: wrap;
+		overflow-y: auto;
+		.item{
+			width: .91rem;
+			height:.91rem;
+			margin:0 .23rem .41rem 0;
+			border:.01rem solid #E0E0E0;
+			box-sizing: border-box;
+			box-sizing: border-box;
+			line-height: .91rem;
+			text-align: center;
+			background:#F5F5F5;
+			@include borderRadius(50%);
+		}
+		.last-item{
+			margin-right: 0;
+		}
+		/* .check{
+			background:#E9FBDF;
+			border:.01rem solid #9FE7B5;
+			@extend .color-green;
+		}
+		.cancel{
+			background:#FFAEAE;
+			border:.01rem solid #EB0000;
+			@extend .color-red;
+			} */
+		}
+	}
+}
+
+/* 练习跟解析界面，答案解析部分样式 */
+.explain{
+	height:auto;
+	min-height:3.3rem;
+	padding:0 .2rem;
+	box-sizing: border-box;
+	margin-top: .11rem; 
+	background:#FFFFFF;
+	.header{
+		height:.9rem;
+		border-bottom:.01rem solid #E5E5E5;
+		padding:.45rem 0 .17rem .14rem;
+		box-sizing: border-box;
+	}
+	.content{
+		width: 100%;
+		height:auto;
+		min-height: 2.39rem;
+		padding:.22rem .12rem 0 .33rem;
+		box-sizing: border-box;
+		.desc{
+			.hint{
+				width: 1.4rem;
+				height:.48rem;
+				line-height: .48rem;
+				text-align: center;
+			}
+			font-size:.26rem;
+			line-height:.48rem;
+			color:#666666;
+		}
+	}
+}
+
+/* 考试结束界面  */
+.check{
+	background:#E9FBDF !important;
+		border:1px solid #9FE7B5 !important;//.01rem在实机上面太小显示不出来,故用px
+		@extend .color-green;
+	}
+	.cancel{
+		background:#FFAEAE !important;
+		border:1px solid #EB0000 !important;//.01rem在实机上面太小显示不出来,故用px
+		@extend .color-red;
+	}
+	/* 公共标题下方提示 */
+	.header .title{
+		height:.28rem;
+		padding-left:.2rem;
+		border-left:.03rem solid #3689FE;
+		font-weight:400;
+		line-height:.28rem;
+		font-size:.24rem;
+		color:#3689FE;
+	}
